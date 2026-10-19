@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bike Energy — Protótipo UPX III</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#view">Ir para o conteúdo</a>
+
+<!-- LOGIN (demonstrativo) -->
+<section id="login" aria-labelledby="login-h">
+  <div class="login-art" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="72" height="72"><path d="M13 2L4 14h7l-1 8 9-12h-7z" fill="#B7FF5A"/></svg>
+    <p>Pedale. Gere energia.<br>Pague menos na mensalidade.</p>
+  </div>
+  <form id="login-form" novalidate>
+    <div class="brand"><span class="logo" aria-hidden="true">⚡</span> Bike Energy</div>
+    <h1 id="login-h">Entrar</h1>
+    <p class="notice">Login demonstrativo: nenhuma autenticação real é feita. Use qualquer e-mail válido e senha com 6+ caracteres.</p>
+    <fieldset class="seg">
+      <legend>Perfil de acesso</legend>
+      <label><input type="radio" name="perfil" value="aluno" checked><span>Aluno</span></label>
+      <label><input type="radio" name="perfil" value="admin"><span>Administrador</span></label>
+    </fieldset>
+    <label for="email">E-mail</label>
+    <input id="email" type="email" autocomplete="email" placeholder="aluno@exemplo.com" aria-describedby="email-e">
+    <p class="err" id="email-e" role="alert"></p>
+    <label for="senha">Senha</label>
+    <input id="senha" type="password" autocomplete="current-password" aria-describedby="senha-e">
+    <p class="err" id="senha-e" role="alert"></p>
+    <button class="btn" type="submit">Entrar</button>
+  </form>
+</section>
+
+<!-- APLICAÇÃO -->
+<div id="app" hidden>
+  <aside id="side">
+    <div class="brand"><span class="logo" aria-hidden="true">⚡</span> Bike Energy</div>
+    <nav id="nav" aria-label="Menu principal"></nav>
+    <button class="ghost" data-act="sair">Sair</button>
+  </aside>
+  <main id="view" tabindex="-1"></main>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
